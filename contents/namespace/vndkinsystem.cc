@@ -38,7 +38,7 @@ namespace linkerconfig {
 namespace contents {
 Namespace BuildVndkInSystemNamespace([[maybe_unused]] const Context& ctx) {
   Namespace ns("vndk_in_system", /*is_isolated=*/true,
-               /*is_visible=*/true);
+               /*is_visible=*/false);
 
   // The search paths here should be kept the same as that of the 'system' namespace.
   ns.AddSearchPath("/system/${LIB}", AsanPath::WITH_DATA_ASAN);
